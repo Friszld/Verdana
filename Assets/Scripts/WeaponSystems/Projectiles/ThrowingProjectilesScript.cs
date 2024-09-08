@@ -8,7 +8,7 @@ public class ThrowingProjectilesScript : MonoBehaviour
 
     public int equippedProjectile = 0;
     [Header("Throwables")]
-    public List<ScriptableObject> scripts = new List<ScriptableObject>();
+    public List<Projectile> scripts = new List<Projectile>();
 
 
     #region
@@ -40,6 +40,8 @@ public class ThrowingProjectilesScript : MonoBehaviour
         {
             Throw();
         }
+
+        objectToThrow = scripts[equippedProjectile].objectToThrow;
     }
 
     public void Throw()
