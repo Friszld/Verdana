@@ -46,6 +46,9 @@ public class ThrowingProjectilesScript : MonoBehaviour
 
     public void Throw()
     {
+        throwForce = scripts[equippedProjectile].forwardForce;
+        throwUpwardForce = scripts[equippedProjectile].forwardForce;
+
         readyToThrow = false;
 
         // instantiate object to throw
