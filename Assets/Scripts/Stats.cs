@@ -32,7 +32,9 @@ public class Stats : MonoBehaviour
             m_timeCounter = 0.0f;
         }
 
+        // Convert to a string
         string fps_number = m_lastFramerate.ToString();
+        // split to only show everything before the decimal point
         string[] splitArray = fps_number.Split(".");
         FPSText.text = splitArray[0];
     }
