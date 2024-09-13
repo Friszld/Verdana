@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cabbfdc51854b243902b984c83870cb, type: 3}
   m_Name: Snowball
   m_EditorClassIdentifier: 
-  upwardForce: 15
-  forwardForce: 70
+  upwardForce: 1
+  forwardForce: 10
   objectToThrow: {fileID: 2204481620696458026, guid: a64607b80a2a3e548b4f0af9e525df27, type: 3}
