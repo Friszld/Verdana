@@ -15,6 +15,7 @@ public class ThrowingProjectilesScript : MonoBehaviour
     [Header("References")]
     public Transform cam;
     public Transform attackPoint;
+    public List<GameObject> objectsToThrow = new List<GameObject>();
     public GameObject objectToThrow;
 
     [Header("Settings")]
@@ -35,17 +36,23 @@ public class ThrowingProjectilesScript : MonoBehaviour
 
     private void Update()
     {
-
+        // Code to throw when left click is pressed (or whatever key is the throwKey)
+        /*
         if(Input.GetKeyDown(throwKey) && readyToThrow && totalThrows > 0)
         {
             Throw();
         }
-
+        */
         objectToThrow = scripts[equippedProjectile].objectToThrow;
     }
 
     public void Throw()
     {
+        if (!readyToThrow)
+        {
+            return;
+        }
+
         throwForce = scripts[equippedProjectile].forwardForce;
         throwUpwardForce = scripts[equippedProjectile].forwardForce;
 
